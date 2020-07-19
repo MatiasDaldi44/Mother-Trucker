@@ -1,0 +1,63 @@
+form.signup,
+form.login {
+	margin-top: 50px;
+}
+
+#map {
+	height: 530px;
+	width: 100%;
+}
+
+.title {
+	font-family: 'Permanent Marker', cursive;
+	font-size: 50px;
+}
+
+.subtitle {
+	font-family: 'Courier', Lucida Console, monospace;
+	font-size: 20px;
+}
+
+.postTitle {
+	font-family: 'Permanent Marker', cursive;
+	font-size: 30px;
+}
+
+.descText {
+	font-family: 'Courier', Lucida Console, monospace;
+	font-size: 16px;
+}
+
+html,
+body {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	background-color: #ededed;
+}
+body > footer {
+	margin-top: auto;
+}
+
+#postContainer {
+	border: 2px dashed black;
+}
+
+.post-container {
+	width: 100%;
+}
+
+.card {
+	border-radius: 5px;
+}
+
+#postsCol {
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+@media screen and (max-width: 767px) {
+    #logo {
+       display: none;
+    }
+}

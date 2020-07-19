@@ -1,0 +1,10 @@
+<div class="column is-three-quarters map-container">
+  <div id="map"></div>
+</div>
+<div class="post-container" id="postsCol" style="height: 560px;">
+{{#each post}}
+  {{> truckers_block}}
+  {{else}}
+  <p class="title has-text-centered">No food trucks currently available in this category.</p>
+{{/each}}
+</div>

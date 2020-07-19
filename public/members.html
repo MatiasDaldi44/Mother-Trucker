@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Passport Authentication</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			type="text/css"
+			rel="stylesheet"
+			href="/stylesheets/style.css"
+		/>
+	</head>
+
+	<body>
+		<nav class="bd-navbar navbar is-warning has-shadow is-spaced" role="navigation" aria-label="main navigation">
+			<div class="navbar-brand">
+				<span class="navbar-item">
+				 <img src="/assets/logo.png" class="image is-720x240">
+				</span>
+	
+				<a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+				</a>
+			</div>
+	
+		<nav class="navbar is-warning" role="navigation" id="navMenu" style="display: none;">
+			<div class="navbar-start">
+				<div class="navbar-dropdown">
+				<a class="navbar-item" href="/">
+					Home
+				</a>
+				<a class="navbar-item" href="/signup">
+					Sign Up
+				</a>
+				<a class="navbar-item" href="/login">
+					Login
+				</a>
+			</div>
+		</nav>
+	
+			<div class="navbar-menu">
+				<div class="navbar-start">
+					<a class="button is-black is-rounded is-outlined" href="/">
+						Home
+					</a>
+				</div>
+	
+				<div class="navbar-end">
+					<div class="navbar-item">
+						<div class="buttons">
+							<a class="button is-black is-rounded is-outlined" href="/login">
+								Log in
+							</a>
+							<a class="button is-black is-rounded" href="/signup">
+								<strong>Sign up</strong>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container">
+			<h1 class="title">Welcome <span class="member-name"></span></h1>
+		</div>
+
+		<main class="section">
+			<!-- Shows the form for the trucker to post their Food Truck info -->
+			<div class="columns">
+				<div class="column is-three-fifths is-offset-one-fifth">
+					<h3 class="subtitle">Add your Food Truck:</h3>
+					<form class="trucker-form">
+						<div class="field is-horizontal">
+							<div class="field-label is-normal">
+								<label class="name">Food Truck Name:</label>
+							</div>
+							<div class="field-body">
+								<div class="field">
+									<div class="control">
+										<input
+											class="input is-info"
+											id="trucker_name"
+											type="text"
+											placeholder="Food Truck Name"
+										/>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="field is-horizontal">
+							<div class="field-label is-normal">
+								<label class="address">Street Address:</label>
+							</div>
+							<div class="field-body">
+								<div class="field">
+									<div class="control">
+										<input
+											class="input is-info"
+											id="trucker_addy"
+											type="text"
+											placeholder="Street Address"
+										/>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="field is-horizontal">
+							<div class="field-label is-normal">
+								<label class="address_extra">City/ State/ Zip</label>
+							</div>
+							<div class="field-body">
+								<div class="field">
+									<input
+										class="input is-info"
+										id="trucker_city"
+										type="text"
+										placeholder="City"
+									/>
+								</div>
+								<div class="field">
+									<input
+										class="input is-info"
+										id="trucker_state"
+										type="text"
+										placeholder="State"
+									/>
+								</div>
+								<div class="field">
+									<input
+										class="input is-info"
+										id="trucker_zipcode"
+										type="text"
+										placeholder="Zipcode"
+									/>
+								</div>
+							</div>
+						</div>
+						<div class="field is-horizontal">
+							<div class="field-label is-normal">
+								<label class="start_time">Start Time:</label>
+							</div>
+							<div class="field is-grouped">
+								<div class="control">
+									<div class="select is-warning">
+										<select id="startTime">
+											<option selected>Select Start Time</option>
+											<option data-value="00:00:00">12:00 am</option>
+											<option data-value="01:00:00">1:00 am</option>
+											<option data-value="02:00:00">2:00 am</option>
+											<option data-value="03:00:00">3:00 am</option>
+											<option data-value="04:00:00">4:00 am</option>
+											<option data-value="05:00:00">5:00 am</option>
+											<option data-value="06:00:00">6:00 am</option>
+											<option data-value="07:00:00">7:00 am</option>
+											<option data-value="08:00:00">8:00 am</option>
+											<option data-value="09:00:00">9:00 am</option>
+											<option data-value="10:00:00">10:00 am</option>
+											<option data-value="11:00:00">11:00 am</option>
+											<option data-value="12:00:00">12:00 pm</option>
+											<option data-value="13:00:00">1:00 pm</option>
+											<option data-value="14:00:00">2:00 pm</option>
+											<option data-value="15:00:00">3:00 pm</option>
+											<option data-value="16:00:00">4:00 pm</option>
+											<option data-value="17:00:00">5:00 pm</option>
+											<option data-value="18:00:00">6:00 pm</option>
+											<option data-value="19:00:00">7:00 pm</option>
+											<option data-value="20:00:00">8:00 pm</option>
+											<option data-value="21:00:00">9:00 pm</option>
+											<option data-value="22:00:00">10:00 pm</option>
+											<option data-value="23:00:00">11:00 pm</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="field-label is-normal">
+								<label class="end_time">End Time:</label>
+							</div>
+							<div class="field is-grouped">
+								<div class="control">
+									<div class="select is-warning">
+										<select id="endTime">
+											<option selected>Select End Time</option>
+											<option data-value="00:00:00">12:00 am</option>
+											<option data-value="01:00:00">1:00 am</option>
+											<option data-value="02:00:00">2:00 am</option>
+											<option data-value="03:00:00">3:00 am</option>
+											<option data-value="04:00:00">4:00 am</option>
+											<option data-value="05:00:00">5:00 am</option>
+											<option data-value="06:00:00">6:00 am</option>
+											<option data-value="07:00:00">7:00 am</option>
+											<option data-value="08:00:00">8:00 am</option>
+											<option data-value="09:00:00">9:00 am</option>
+											<option data-value="10:00:00">10:00 am</option>
+											<option data-value="11:00:00">11:00 am</option>
+											<option data-value="12:00:00">12:00 pm</option>
+											<option data-value="13:00:00">1:00 pm</option>
+											<option data-value="14:00:00">2:00 pm</option>
+											<option data-value="15:00:00">3:00 pm</option>
+											<option data-value="16:00:00">4:00 pm</option>
+											<option data-value="17:00:00">5:00 pm</option>
+											<option data-value="18:00:00">6:00 pm</option>
+											<option data-value="19:00:00">7:00 pm</option>
+											<option data-value="20:00:00">8:00 pm</option>
+											<option data-value="21:00:00">9:00 pm</option>
+											<option data-value="22:00:00">10:00 pm</option>
+											<option data-value="23:00:00">11:00 pm</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="field is-horizontal">
+							<div class="field-label is-normal">
+								<label class="category">Cuisine Type:</label>
+							</div>
+							<div class="field-body">
+								<div class="field">
+									<div class="control">
+										<div class="select is-warning is-fullwidth">
+											<select id="foodTypes"> </select>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="buttons has-addons is-right">
+							<button class="button is-success" id="submitBtn">
+								Submit Food Truck
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<!-- Container that will show all the posts by the specific user logged in -->
+			<div class="columns">
+				<div class="column is-three-fifths is-offset-one-fifth">
+					<h3 class="subtitle">Current Posts:</h3>
+				</div>
+			</div>
+			<div class="columns">
+				<div
+					class="column is-three-fifths is-offset-one-fifth"
+					id="postContainer"
+				></div>
+			</div>
+		</main>
+
+		<footer class="footer">
+			<div class="content has-text-centered">
+				<p class="subtitle">
+					<strong>MOTHER TRUCKER!</strong> by Chris Smith, Eunah Kim, and Matias
+					Daldi | © 2020.
+				</p>
+			</div>
+		</footer>
+		
+		<script src="https://kit.fontawesome.com/882676d0bc.js" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<script type="text/javascript" src="js/members.js"></script>
+		<script src="/js/navbar.js"></script>
+	</body>
+</html>

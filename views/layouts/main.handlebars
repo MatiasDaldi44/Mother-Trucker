@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mother Trucker!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link type="text/css" rel="stylesheet" href="https://unpkg.com/leaflet-draw@0.4.13/dist/leaflet.draw.css" />
+    <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css" />
+    <link type="text/css" rel="stylesheet" href="/stylesheets/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/882676d0bc.js" crossorigin="anonymous"></script>
+    <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/leaflet-draw@0.4.13/dist/leaflet.draw.js"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
+</head>
+
+<body>
+    <nav class="bd-navbar navbar is-warning has-shadow is-spaced" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <span class="navbar-item">
+             <img src="/assets/logo.png" class="image is-720x240">
+            </span>
+
+            <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+    <nav class="navbar is-warning" role="navigation" id="navMenu" style="display: none;">
+        <div class="navbar-start">
+            <div class="navbar-dropdown">
+            <a class="navbar-item" href="/">
+                Home
+            </a>
+            <a class="navbar-item" href="/signup">
+                Sign Up
+            </a>
+            <a class="navbar-item" href="/login">
+                Login
+            </a>
+        </div>
+    </nav>
+
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                <a class="button is-black is-rounded is-outlined" href="/">
+                    Home
+                </a>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-black is-rounded is-outlined" href="/login">
+                            Log in
+                        </a>
+                        <a class="button is-black is-rounded" href="/signup">
+                            <strong>Sign up</strong>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero is-warning is-medium">
+        <div class="hero-body">
+            <div class="container columns is-vcentered">
+                <div class="column is-one-fifth" id="logo">
+                    <figure class="image is-128x128 is-centered is-pulled-right">
+                        <img class="is-rounded" src="/assets/mothertrucker.png">
+                    </figure>
+                </div>
+                <div class="column">
+                    <h1 class="title">
+                        MOTHER TRUCKERS
+                    </h1>
+                    <h3 class="subtitle">
+                        Calling all Food Truck Lovers
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="section container is-fluid">
+        <div class="section columns is-desktop is-vcentered px-0 py-0">
+        {{{body}}}
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p class="subtitle"><strong>MOTHER TRUCKER!</strong> by Chris Smith, Eunah Kim, and Matias Daldi | © 2020.
+            </p>
+        </div>
+    </footer>
+
+    <script src="/js/map.js"></script>
+    <script src="/js/navbar.js"></script>
+</body>
+
+</html>
