@@ -11,3 +11,4 @@ npm i
 [Mother-Trucker](http://arcane-waters-56136.herokuapp.com/)
 
 ## Questions
+If you have any questions about the repo, you can open an issue, or contact matiasdaldi44 directly at matiasdaldi@gmail.com.
