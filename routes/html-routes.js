@@ -5,7 +5,6 @@ const isAuthenticated = require('../config/middleware/isAuthenticated');
 
 const db = require('../models');
 
-
 module.exports = function (app) {
 	app.get('/', (req, res) => {
 		db.Categories.findAll({
