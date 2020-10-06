@@ -14,6 +14,5 @@ module.exports = function(sequelize, DataTypes) {
         onDelete: "Cascade"
       });
     };
-
     return Categories;
   };
